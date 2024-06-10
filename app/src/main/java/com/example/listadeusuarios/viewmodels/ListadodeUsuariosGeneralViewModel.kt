@@ -12,7 +12,6 @@ import kotlinx.coroutines.launch
 
 class ListadodeUsuariosGeneralViewModel:ViewModel() {
     private val repositoryUsuario=ImplementUsers()
-
     private val mutablelistusuarios= MutableLiveData<MutableList<UsuarioResponse>>()
     val listadousuario_ld: LiveData<MutableList<UsuarioResponse>>
         get()=mutablelistusuarios

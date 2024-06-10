@@ -11,6 +11,7 @@ class ImplementUsers : InterfasUsers {
     var usuarioServicio= RetrofitHelper.getRetrofit().create(UsuarioInterfasService::class.java)
 
     override suspend fun traertodoslosusuarios(): MutableList<UsuarioResponse> {
+        //esta es una corrutina
         return withContext(Dispatchers.IO) {
             //esta es la corutina que va siempre
             val userlist = usuarioServicio.traertodoslosusuarios()
